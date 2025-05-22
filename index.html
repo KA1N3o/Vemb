@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyViet - Đặt vé máy bay trực tuyến</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>FlyViet</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Trang chủ</a></li>
+                    <li><a href="assets/pages/khuyen-mai.html">Khuyến mãi</a></li>
+                    <li><a href="assets/pages/ticket-search.html">Tra cứu vé</a></li>
+                    <li><a href="assets/pages/ho-tro.html">Hỗ trợ</a></li>
+                    <li><a href="assets/pages/lien-he.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Đặt vé máy bay trực tuyến</h1>
+            <h2>Dễ dàng - Nhanh chóng - Tiết kiệm</h2>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <ul class="tabs">
+                    <li class="active"><a href="#one-way">Một chiều</a></li>
+                    <li><a href="#round-trip">Khứ hồi</a></li>
+                </ul>
+                
+                <form id="search-form" action="assets/pages/flight-list.html" method="GET">
+                    <div class="form-group col-2">
+                        <div class="input-group">
+                            <label for="departure">Điểm đi</label>
+                            <select id="departure" name="departure" required>
+                                <option value="">Chọn điểm khởi hành</option>
+                                <option value="HAN">Hà Nội (HAN)</option>
+                                <option value="SGN">Hồ Chí Minh (SGN)</option>
+                                <option value="DAD">Đà Nẵng (DAD)</option>
+                                <option value="CXR">Nha Trang (CXR)</option>
+                                <option value="PQC">Phú Quốc (PQC)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="destination">Điểm đến</label>
+                            <select id="destination" name="destination" required>
+                                <option value="">Chọn điểm đến</option>
+                                <option value="HAN">Hà Nội (HAN)</option>
+                                <option value="SGN">Hồ Chí Minh (SGN)</option>
+                                <option value="DAD">Đà Nẵng (DAD)</option>
+                                <option value="CXR">Nha Trang (CXR)</option>
+                                <option value="PQC">Phú Quốc (PQC)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-2">
+                        <div class="input-group">
+                            <label for="depart-date">Ngày đi</label>
+                            <input type="date" id="depart-date" name="depart-date" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="return-date">Ngày về</label>
+                            <input type="date" id="return-date" name="return-date">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-3">
+                        <div class="input-group">
+                            <label for="adults">Người lớn</label>
+                            <input type="number" id="adults" name="adults" value="1" min="1" max="9">
+                        </div>
+                        <div class="input-group">
+                            <label for="children">Trẻ em (2-12 tuổi)</label>
+                            <input type="number" id="children" name="children" value="0" min="0" max="9">
+                        </div>
+                        <div class="input-group">
+                            <label for="infants">Em bé (< 2 tuổi)</label>
+                            <input type="number" id="infants" name="infants" value="0" min="0" max="4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-1">
+                        <div class="input-group">
+                            <label for="seat-class">Hạng ghế</label>
+                            <select id="seat-class" name="seat-class" required>
+                                <option value="ECONOMY">Phổ thông</option>
+                                <option value="PREMIUM_ECONOMY">Phổ thông đặc biệt</option>
+                                <option value="BUSINESS">Thương gia</option>
+                                <option value="FIRST">Thương gia hạng nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-1">
+                        <button type="submit" class="btn-search">Tìm chuyến bay</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Tại sao chọn FlyViet?</h2>
+            <div class="feature-boxes">
+                <div class="feature-box">
+                    <i class="fas fa-coins"></i>
+                    <h3>Giá rẻ nhất</h3>
+                    <p>Cam kết mang đến mức giá tốt nhất cho mọi hành trình</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-headset"></i>
+                    <h3>Hỗ trợ 24/7</h3>
+                    <p>Đội ngũ tư vấn viên luôn sẵn sàng hỗ trợ bạn mọi lúc</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Thanh toán an toàn</h3>
+                    <p>Bảo mật thông tin và đa dạng phương thức thanh toán</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-gift"></i>
+                    <h3>Ưu đãi hấp dẫn</h3>
+                    <p>Thường xuyên có các chương trình khuyến mãi đặc biệt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <div class="container">
+            <h2>Điểm đến phổ biến</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/04/anh-ha-noi.jpg" alt="Hà Nội">
+                    <div class="destination-info">
+                        <h3>Hà Nội</h3>
+                        <p>Từ <span class="price">599.000đ</span></p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Hồ Chí Minh">
+                    <div class="destination-info">
+                        <h3>Hồ Chí Minh</h3>
+                        <p>Từ <span class="price">699.000đ</span></p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://media.istockphoto.com/id/1156033272/vi/anh/quang-c%E1%BA%A3nh-c%E1%BA%A7u-r%E1%BB%93ng.jpg?s=612x612&w=0&k=20&c=q7yok6ucqrpLUqqz8mH5Zpx1Bx6-SOrwRefZ6nXQSlQ=" alt="Đà Nẵng">
+                    <div class="destination-info">
+                        <h3>Đà Nẵng</h3>
+                        <p>Từ <span class="price">799.000đ</span></p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://media.vneconomy.vn/images/upload/2024/02/28/phu-quoc.jpg" alt="Phú Quốc">
+                    <div class="destination-info">
+                        <h3>Phú Quốc</h3>
+                        <p>Từ <span class="price">899.000đ</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>FlyViet</h3>
+                    <p>Đặt vé máy bay trực tuyến nhanh chóng, tiện lợi với giá tốt nhất.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Thông tin</h4>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn đặt vé</a></li>
+                        <li><a href="#">Chính sách hoàn hủy</a></li>
+                        <li><a href="#">Chính sách bảo hiểm</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Liên hệ</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> support@flyviet.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FlyViet. Tất cả các quyền được bảo lưu. ( Nhóm 12 )</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
